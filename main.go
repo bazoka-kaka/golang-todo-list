@@ -17,6 +17,6 @@ func main() {
 	http.Handle("/users", middlewares.Authenticate(middlewares.AllowOnlyGET(http.HandlerFunc(controllers.GetAllUsers))))
 
 	// listen to server
-	fmt.Println("server running on port 35000")
+	fmt.Println("server running on port 3500")
 	http.ListenAndServe(":3500", nil)
 }
